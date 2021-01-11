@@ -1,8 +1,14 @@
 import requests
 
-print(requests.__version__)
+print("Python Requests Module Version: " + requests.__version__ )
 
-x = requests.get('https://www.google.com/')
+print("--- \n")
 
-print(x.content)
+response = requests.get('https://raw.githubusercontent.com/amy-xiang/CMPUT404-lab1/master/getRequestsVersion.py')
+
+data = response.content.decode('utf-8')
+
+print(data)
+
+
 
